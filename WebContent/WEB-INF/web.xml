@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>FileManageProject</display-name>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <!-- 文件上传 -->
+  <servlet>
+  	<servlet-name>uploadFileServlet</servlet-name>
+  	<servlet-class>com.test.controller.UploadFileServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>uploadFileServlet</servlet-name>
+  	<url-pattern>/servlet/uploadFileServlet</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 文件列表 -->
+  <servlet>
+  	<servlet-name>queryFileListServlet</servlet-name>
+  	<servlet-class>com.test.controller.QueryFileListServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+	<servlet-name>queryFileListServlet</servlet-name>
+	<url-pattern>/servlet/queryFileListServlet</url-pattern>  
+  </servlet-mapping>
+  
+  <!-- 文件下载 -->
+  <servlet>
+  	<servlet-name>downLoadFileServlet</servlet-name>
+  	<servlet-class>com.test.controller.DownLoadFileServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+	<servlet-name>downLoadFileServlet</servlet-name>
+	<url-pattern>/servlet/downLoadFileServlet</url-pattern>  
+  </servlet-mapping>
+  
+  
+   <servlet>
+  	<servlet-name>searchServlet</servlet-name>
+  	<servlet-class>com.test.controller.SearchServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>searchServlet</servlet-name>
+  	<url-pattern>/servlet/searchServlet</url-pattern>
+  </servlet-mapping>
+</web-app>
